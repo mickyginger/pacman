@@ -1,0 +1,75 @@
+body {
+  background: black;
+}
+
+.grid {
+  width: 600px;
+  height: 600px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  width: calc(100% / 28);
+  height: calc(100% / 28);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid div.food:after {
+  content: '';
+  width: 25%;
+  height: 25%;
+  background-color: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.grid div.big-food:after {
+  content: '';
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.grid div.wall {
+  background-color: darkBlue;
+}
+
+.pacman {
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.red {
+  background-color: red;
+}
+
+.cyan {
+  background-color: cyan;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.prey {
+  background-color: dodgerBlue;
+}
+
+.deceased {
+  background-color: white;
+}
