@@ -1,12 +1,16 @@
 body {
   background: black;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .grid {
   width: 600px;
   height: 600px;
-
-  margin: auto;
 
   display: flex;
   align-items: center;
