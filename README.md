@@ -21,10 +21,10 @@ I then created a `Ghost` class which also inherited from `Character`. This class
 
 Both characters move around the grid by swapping classes on `div` elements. The whole grid is an array of divs, and the movement is calculated using the index of the `div` in the array. I used a 28 x 28 grid. To find the `div` that the character wants to move to I used the following formula:
 
-- **NORTH**: currentIndex - width
-- **SOUTH**: currentIndex + width
-- **EAST**: currentIndex + 1
-- **WEST**: currentIndex - 1
+- **NORTH**: character index - width
+- **SOUTH**: character index + width
+- **EAST**: character index + 1
+- **WEST**: character index - 1
 
 I prevented characters walking through walls, I checked for the class of `wall` on the `div` before making the move.
 
