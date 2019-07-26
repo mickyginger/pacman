@@ -1,4 +1,5 @@
 /* global Character */
+/* eslint-disable no-unused-vars */
 class Ghost extends Character {
 
   constructor(cells, className, startPosition) {
@@ -22,7 +23,7 @@ class Ghost extends Character {
   isCloser(index, point) {
     const [pointX, pointY] = this.getCoords(point)
     const [posX, posY] = this.getCoords(this.position)
-    let [nextX, nextY] = this.getCoords(index)
+    const [nextX, nextY] = this.getCoords(index)
 
     return Math.abs(nextX - pointX) > Math.abs(posX - pointX) ||
       Math.abs(nextY - pointY) > Math.abs(posY - pointY)
@@ -96,15 +97,13 @@ class Ghost extends Character {
     if(this.hasClass('deceased')) {
       if(this.position === this.startPosition) this.removeClass('deceased')
       else this.nest()
-    }
-
-    else if(this.hasClass('prey')) this.flee()
-
-    else if(this.cells[this.position].classList.contains('nest')){
+    } else if(this.hasClass('prey')) {
+      this.flee()
+    } else if(this.cells[this.position].classList.contains('nest')) {
       this.leaveNest()
+    } else {
+      this.hunt()
     }
-
-    else this.hunt()
 
     this.animateId = setTimeout(() => {
       this.animate()
