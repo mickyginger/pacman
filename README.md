@@ -2,7 +2,7 @@
 
 > An implementation of PacMan, using JavaScript
 
-<img src="https://user-images.githubusercontent.com/3531085/61970033-d5b6d480-afd3-11e9-875b-e0bf1ed993ca.png" style="box-shadow:0 2px 25px 0">
+<img src="https://user-images.githubusercontent.com/3531085/61970033-d5b6d480-afd3-11e9-875b-e0bf1ed993ca.png">
 
 Play online here: https://mickyginger.github.io/pacman/
 
